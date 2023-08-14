@@ -1,0 +1,15 @@
+apiVersion: nsx.vmware.com/v1alpha1
+kind: VPCNetworkConfiguration
+metadata:
+  name: vpc-network-config1
+spec:
+  defaultGatewayPath: /infra/tier-0s/t0
+  edgeClusterPath: /infra/sites/default/enforcement-points/default/edge-clusters/2d9df59f-6dc6-4911-8865-21fadc23d4da
+  defaultIPv4SubnetSize: 26
+  nsxtProject: proj-1
+  externalIPv4Blocks:
+    - /infra/ip-blocks/block1
+  privateIPv4CIDRs:
+    - 172.26.0.0/16
+    - 172.36.0.0/16
+  defaultSubnetAccessMode: public
